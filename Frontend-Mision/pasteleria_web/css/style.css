@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300;0,600;1,900&display=swap');
+
+:root{
+  --choco:#45322e;
+  --blanco: #fff;
+  --colorb: #000;
+  --text: #eae6ca;
+}
+
+*{
+  font-family: 'Epilogue', sans-serif;/**/
+  margin:0; padding:0;
+  box-sizing: border-box;
+  outline: none; border:none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition:all .2s linear;
+}
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+section{  padding:2rem 9%;  background: #fff;  }
+
+/*  ------------------------------------------------------------------  */
+
+.header{
+  position: fixed;
+  top:0; left: 0; right:0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--blanco);
+  padding:1rem 9%;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.header .logotipo{  height: 60px; padding: 0; }
+
+.header .logotipo:hover{  transform: scale(1.5);  }
+
+.header .navbar a{
+  font-size: 2rem;
+  margin-left: 2rem;
+  color:#666;
+  text-align: center;
+}
+
+.header .navbar a:hover{  color: #45322e ;  font-weight: bold;  }
+
+#menu-bar{
+  display: none;
+  font-size: 3.5rem;
+  color:#666;
+  padding:.5rem 1.5rem;
+  cursor: pointer;
+}
+
+
+#menu-bar:hover{  color: #000;  font-size: 3.6rem;  }
+
+/*  ------------------------------------------------------------------  */
+.heading{
+  text-align: center;
+  font-size: 3.5rem;
+  padding:1rem;
+  color:#666;
+}
+
+.heading span{ color:var(--choco);  }
+
+/*  ------------------------------------------------------------------  */
+
+
+/*  HOME SECTION START  */
+.home{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  min-height: 100vh;
+  align-items: center;/*
+  background:url(../images/hoomee.png) no-repeat;
+  background-size: cover;
+  background-position: center;*/
+  background: var(--blanco);
+}
+
+.home .content{
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+}
+
+.home .image{ flex:1 1 40rem; }
+
+.home .image img{
+  width:  90%;
+  padding:1rem;
+  animation:float 3s linear infinite;
+}
+
+@keyframes float{
+  0%, 100%{
+    transform: translateY(0rem);
+  }
+  50%{
+    transform: translateY(3rem);
+  }
+}
+
+.home .content h3{
+  font-size: 5rem;
+  color:#191919;
+}
+
+.home .content span{
+  font-size: 6rem;
+  color:#45322e ;
+  font-weight: bold;
+}
+
+
+.btn{
+  display: inline-block;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--choco);
+  color:var(--choco);
+  cursor: url("../images/csake.png"), auto;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top:0; right: 0;
+  width:0%;
+  height:100%;
+  background:var(--choco);
+  z-index: -1;
+}
+
+.btn:hover::before{
+  width:100%;
+  left: 0;
+}
+
+.btn:hover{
+  color:  var(--blanco);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+/*  HOME SECTION FINALLY  */
+
+
+/*  MENU START  */
+.popular .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.popular .box-container .box{
+  padding:2rem;
+  background:#eae6ca;
+  border-radius: .8rem;
+  text-align: center;
+  flex:1 1 30rem;
+  position: relative;
+}
+
+.popular .box-container .box img{
+  height:25rem;
+  object-fit: cover;
+  width:100%;
+  border-radius: .5rem;
+}
+
+.popular .box-container .box .price{
+  position: absolute;
+  top:3rem; left:3rem;
+  background:var(--choco);
+  color:  var(--blanco);
+  font-size: 2rem;
+  padding:.5rem 1rem;
+  border-radius: .5rem;
+  font-weight: bold;
+}
+
+.popular .box-container .box h3{
+  color:#333;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+}
+
+.popular .box-container .box .stars i{
+  color: #45322e;
+  font-size: 1.7rem;
+  padding:1rem .1rem;
+}
+
+.popular .box-container .box .stars i:hover{  color: #FFD700; }
+/*  MENU END  */
+
+
+/*  GELATINAS START */
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.gallery .box-container .box{
+  height:25rem;
+  flex:1 1 30rem;
+  border:1rem solid #fff;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .box-container .box img{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  background:rgba(255,255,255,.9);
+  padding:2rem;
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.gallery .box-container .box .content h3{
+  font-size: 2.5rem;
+  color: var(--choco);
+  margin-top: 30px;
+}
+
+
+.gallery .box-container .box .price {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  background: var(--choco);
+  color: var(--blanco);
+  font-size: 2rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+
+.gallery .box-container .box:hover .content{  top:0;  }
+/*  GELATINAS end */
+
+
+
+
+/*  INGREDIENTES start  */
+.ingredients{
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--choco);
+}
+
+
+.ingre{
+  min-width: 700px;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--colorb);
+  cursor: pointer;
+  background: var(--text);
+}
+
+
+.list-ingre{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.list-ingre h3{ font-size: 30px; font-weight: bold; }
+
+.answer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+
+.answer li{
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.ingre.active .answer{
+  max-height: 300px;
+  animation: fade 1s ease-in-out;
+}
+
+.ingre.active svg{  transform: rotate(180deg);  }
+
+.ingredients svg{ transition: transform 0.5s ease-in; }
+
+
+@keyframes fade {
+  from{
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to{
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+/*  ingredientes END  */
+
+
+
+/*  CONTACT FORM START   */
+#order{ width: 100%;  height: 100vh;  }
+
+.order .row{
+  padding:2rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+  background:#fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  border-radius: .5rem;
+}
+
+.order .row .image{ flex: 1 1 30rem;  }
+
+.order .row .image img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+  border-radius: .5rem;
+}
+
+.order .row form{
+  flex: 1 1 50rem;
+  padding:1rem;
+}
+
+.order .row form .inputBox{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.order .row form .inputBox input, .order .row form textarea{
+  padding:1rem;
+  margin:1rem 0;
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+  border:.1rem solid rgba(0,0,0,.3);
+  border-radius: .5rem;
+  width:49%;
+}
+
+.order .row form textarea{
+  width:100%;
+  resize: none;
+  height:15rem;
+}
+
+.order .row form .btn:hover{  background:var(--choco);  }
+/*  CONTACT FORM END   */
+
+
+/*  FOOTER START */
+footer {
+  width: 100%;
+  background-color: #191919;
+  padding: 20px;
+}
+
+.socail{  margin: 10px; }
+
+.socail ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.socail ul li { margin-right: 0.5rem; }
+
+.socail ul li a {
+  font-size: 24px;
+  color: var(--blanco);
+}
+
+footer ul li a {
+  font-size: 18px;
+  color: var(--blanco);
+  text-decoration: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+footer ul li:hover {
+  background-color: var(--choco);
+  border-radius: 5px;
+}
+
+footer .copy{
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--blanco);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+}
+.copy a{  color: #666;  }
+.copy a:hover{  color: var(--choco);  }
+/*  FOOTER END */
+
+
+
+/* media queries  */
+@media(max-width:768px){ /*version mobile*/
+
+  #menu-bar{  display: initial; }
+
+  header .navbar{
+    position: absolute;
+    top: 100%; left: 0; right:0;
+    background: var(--blanco);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a{ padding: 1rem;  display: block; }
+
+  /*header .navbar a:hover{ background: #000; }*/
+  header .navbar a:hover{ font-size: 3rem; }
+
+  .home .content{ text-align: center; }
+
+  .home .content h3{  font-size: 4rem;  margin-top: 40px; margin-block-end: 11px; }
+
+  .home .content span{  font-size: 5rem;  }
+  
+
+
+  #order{
+    width: 100%;
+    height: 100vh;
+    margin-block-end: 100px;
+  }
+
+  footer .copy{
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--blanco);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+  }
+
+}
+
+
